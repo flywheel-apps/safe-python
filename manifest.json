@@ -1,0 +1,37 @@
+{
+	"name": "safe-python",
+	"label": "Safe Python",
+	"description": "A quick demonstration of best-practice gear development using python 3 and the runsc module.",
+	"version": "1",
+	"inputs": {
+		"api-key": {
+			"base": "api-key"
+		}
+	},
+	"config": {
+		"fast": {
+			"default": false,
+			"description": "Print a message about going fast.",
+			"type": "boolean"
+		}
+	},
+	"environment": {
+		"LANG": "C.UTF-8",
+		"PATH": "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+	},
+	"command": "./example.py",
+	"author": "Nathaniel Kofalt",
+	"maintainer": "Nathaniel Kofalt",
+	"license": "MIT",
+	"source": "",
+	"url": "",
+	"custom": {
+		"flywheel": {
+			"module": "runsc"
+		},
+		"gear-builder": {
+			"category": "converter",
+			"image": "python:3-slim"
+		}
+	}
+}
