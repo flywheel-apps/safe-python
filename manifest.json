@@ -23,7 +23,7 @@
 	"author": "Nathaniel Kofalt",
 	"maintainer": "Nathaniel Kofalt",
 	"license": "MIT",
-	"source": "",
+	"source": "https://github.com/flywheel-apps/safe-python",
 	"url": "",
 	"custom": {
 		"flywheel": {
