@@ -1,7 +1,7 @@
-# Safe Python
+# Safe Python (Runsc)
 
-A quick demonstration of best-practice gear development using python 3.
-
+A quick demonstration of best-practice gear development using python 3 and runsc.<br/>
+This module, when available, provides a security boundary beyond what is traditional for the containerization ecosystem.
 
 ## Building
 
@@ -36,7 +36,8 @@ Gear invocation:
 I feel the need... the need, for speed!
 
 Interacting with the server...
-Your name in Flywheel is Nathaniel Kofalt.
+Could not interact with server, error was:
+HTTPSConnectionPool(host='<hostname>', port=8443): Max retries exceeded with url: /api/users/self (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa73a8e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
 
 Running some commands...
 Linux 4.15.0-55-generic
@@ -44,6 +45,8 @@ There are 559 words in example.py.
 
 Complete!
 ```
+
+Note that the server interaction does not succeed, as networking is not currently supported with our runsc module.
 
 ## Other versions
 
