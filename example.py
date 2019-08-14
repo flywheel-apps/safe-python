@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Note:
 # The above shebang, and setting the file's executable bit, allows the manifest's "command" key to be "./example.py".

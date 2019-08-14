@@ -1,0 +1,28 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%files
+    ./readme.md     /flywheel/v0/readme.md
+    ./example.py    /flywheel/v0/example.py
+    ./manifest.json /flywheel/v0/manifest.json
+
+%post
+	mkdir -p /flywheel/v0
+	mkdir -p /flywheel/v0/output
+	touch    /flywheel/v0/config.json
+
+    apt update
+    apt install -y python3 python3-pip
+    apt install -y curl
+    python3 -m pip install -U flywheel-sdk
+
+%environment
+    export LANG=C.UTF-8
+    export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+%test
+	python3 --version
+	/flywheel/v0/example.py || true
+
+%runscript
+   ./example.py

@@ -1,7 +1,7 @@
 {
-	"name": "safe-python",
-	"label": "Safe Python",
-	"description": "A quick demonstration of best-practice gear development using python 3.",
+	"name": "safe-python-singularity",
+	"label": "Safe Python (Singularity)",
+	"description": "A quick demonstration of best-practice gear development using python 3 and singularity.",
 	"version": "1",
 	"inputs": {
 		"api-key": {
@@ -25,10 +25,8 @@
 	"license": "MIT",
 	"source": "https://github.com/flywheel-apps/safe-python",
 	"url": "",
-	"custom": {
-		"gear-builder": {
-			"category": "converter",
-			"image": "python:3-slim"
-		}
-	}
+	"capabilities": [
+		"networking",
+		"singularity"
+	]
 }
