@@ -1,6 +1,7 @@
 # Safe Python
 
-A quick demonstration of best-practice gear development using python 3 and the runsc module.
+A quick demonstration of best-practice gear development using python 3.
+
 
 ## Building
 
@@ -34,12 +35,17 @@ Gear invocation:
 
 I feel the need... the need, for speed!
 
-Could not interact with server, error was:
-HTTPSConnectionPool(host='docker.local.flywheel.io', port=8443): Max retries exceeded with url: /api/users/self (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fe12385ceb8>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Interacting with the server...
+Your name in Flywheel is Nathaniel Kofalt.
 
 Running some commands...
-Linux 4.15.0-54-generic
-There are 550 words in example.py.
+Linux 4.15.0-55-generic
+There are 559 words in example.py.
 
 Complete!
 ```
+
+## Other versions
+
+There are multiple versions of this gear for different purposes - most of them experimental.<br/>
+Check the [branches](https://github.com/flywheel-apps/safe-python/branches) page for a list.

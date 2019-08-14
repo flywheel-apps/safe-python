@@ -42,8 +42,9 @@ import sys
 fw = flywheel.Client(invocation["inputs"]["api-key"]["key"])
 
 def interact_with_server():
+	print("Interacting with the server...")
 	user = fw.get_current_user()
-	print('Your name is', user.self.firstname)
+	print('Your name in Flywheel is', user.firstname, user.lastname + '.')
 
 try:
 	interact_with_server()
