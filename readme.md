@@ -56,7 +56,31 @@ This gear's `safe-python-singularity.def` file has commands in the `%post` step 
 
 ## Troubleshooting
 
-Sometimes while building you may run into this error:
+### Old singularity incompatibility after build
+
+Even when using the older `.simg` format, you may need to produce those images with an old singularity version.<br/>
+This gear built with singularity 3.3 and ran with 2.6 yielded an error:
+
+```
+Unknown image format/type: safe-python-1-singularity-3.3.simg
+```
+
+This may be related to [this singularity bug report](https://github.com/sylabs/singularity/issues/1192). The resolution was to build the gear with the older singularity version.
+
+### Old singularity definition file change
+
+On an older singularity, you may run into an error like this while building:
+
+```
+singularity /bin/cp: cannot create regular file '/usr/local/var/singularity/mnt/container//flywheel/v0/readme.md': No such file or directory
+```
+
+This is because the `$files` section does not create folders for you when copying files.<br/>
+This gear has a `%setup` section to take care of that.
+
+### Old singularity build error
+
+You may run into this error:
 
 ```
 singularity image-build: relocation error: /lib/x86_64-linux-gnu/libnss_files.so.2: symbol __libc_readline_unlocked version GLIBC_PRIVATE not defined in file libc.so.6 with link time reference
