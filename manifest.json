@@ -2,7 +2,7 @@
 	"name": "safe-python-singularity",
 	"label": "Safe Python (Singularity)",
 	"description": "A quick demonstration of best-practice gear development using python 3 and singularity.",
-	"version": "1",
+	"version": "2",
 	"inputs": {
 		"api-key": {
 			"base": "api-key"
@@ -10,9 +10,29 @@
 	},
 	"config": {
 		"fast": {
+			"type": "boolean",
 			"default": false,
-			"description": "Print a message about going fast.",
-			"type": "boolean"
+			"description": "Print a message about going fast."
+		},
+		"sge-cpu": {
+			"type": "string",
+			"default": "4-8",
+			"description": "[SGE] How many cores to request. This is used for the underlying '-pe threaded' option."
+		},
+		"sge-ram": {
+			"type": "string",
+			"default": "4G",
+			"description": "[SGE] How much RAM to request. This is used for the underlying '-l h_vmem' option."
+		},
+		"singularity-debug": {
+			"type": "boolean",
+			"default": false,
+			"description": "[Singularity] Enable verbose logging."
+		},
+		"singularity-writable": {
+			"type": "boolean",
+			"default": false,
+			"description": "[Singularity] Mount the container as writable."
 		}
 	},
 	"environment": {
